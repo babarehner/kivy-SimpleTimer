@@ -1,0 +1,1 @@
+This is a simple countdown timer built with Kivy and Python. It consists of a round Face and a TimerHand. When you enter the number of seconds to count down the hand appears and then goes around the face once from 0 to 360 degrees, stopping at each second to redraw the hand.
