@@ -1,0 +1,29 @@
+# timer.kv
+
+<CountDownTimer>:
+	seconds_input: _seconds
+	hand: _hand
+	BoxLayout:
+		size_hint: [1, .1]
+		pos_hint: { 'x' : 0, 'y': .9}
+		TextInput:
+			id: _seconds
+			size_hint_x: 2
+			input_type: 'number'
+		Button:
+			size_hint_x: 1
+			text: 'Start'
+			on_press: root.start_hand()
+	RelativeLayout:
+		size_hint: [1, .9]
+		Face:
+			canvas:
+				Color:
+					rgb: .93,.68,.05
+				Line:
+					circle: self.center_x, self.center_y, self.height/3, 0, 360
+					width: 2				
+		TimerHand:
+			id: _hand
+			r: min(root.size)*0.9/2
+						
