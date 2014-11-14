@@ -26,8 +26,8 @@ class CountDownTimer(RelativeLayout):
     def start_hand(self):
         self.hand.draw_hand(0)
         et = int(self.get_seconds())
-        # try to get a better sweep out of hand, drawing too slow to work
-        speed_dial = 1  
+        # divisor to create more or fewer drawing cncrements 1 = 1 secone/ 60 = 1/60 second
+        speed_dial = 60.0
         # try to get smaller increments of hand drawing    
         angle_increment = et * speed_dial 
         i = 1
